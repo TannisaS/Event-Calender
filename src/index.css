@@ -1,0 +1,204 @@
+/* Calendar Container */
+.calendar-container {
+  display: flex;
+  gap:50px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  justify-content: space-between;
+}
+
+/* Calendar Header */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 80px;
+  padding: 5px 10px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d0d0d0;
+}
+
+button.small-button {
+  padding: 5px 15px;
+  font-size: 12px;
+}
+
+span {
+  font-size: 18px;
+}
+
+/* Days of the Week */
+.day-of-week {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.calendar-day {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: #e0e0e0;
+}
+
+.calendar-day.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.calendar-day.weekend {
+  background-color: #fff7d8; /* Light yellow for weekends */
+}
+
+/* Event Dot */
+.event-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* Event Panel */
+.event-panel {
+  width: 20%;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-panel h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.event-list .event-item {
+  background-color: #fff;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.event-list .event-item p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #ff6347;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.delete-button:hover {
+  background-color: #ff4500;
+}
+
+/* Selected Day Events */
+.selected-day-events {
+  width: 40%;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.selected-day-events h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.selected-day-events .event-item {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Event dot styles */
+.event-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: red; /* Default color */
+}
+
+/* Event Category Color Coding */
+.work-event {
+  background-color: red; /* Red dot for work events */
+}
+
+.personal-event {
+  background-color: yellow; /* Yellow dot for personal events */
+}
+
+.other-event {
+  background-color: lightgreen; /* Light green dot for others events */
+}
+
+.event-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+/* Calendar Day Styling */
+.calendar-day {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.calendar-day.has-event {
+  border: 1px solid #ccc; /* Border for days with events */
+}
+
+.calendar-day.weekend {
+  background-color: lightyellow; /* Light yellow background for weekends */
+}
+
+.calendar-day.today {
+  background-color: rgb(255, 243, 8); /* Light green background for today */
+}
+
+.calendar-day.selected {
+  border: 2px solid blue; /* Blue border for selected day */
+}
